@@ -1,4 +1,4 @@
-# HNG backend track stage 2
+## PERSON API
 This API provides CRUD (Create, Read, Update, Delete) operations for managing a "person" resource. It allows you to create, retrieve, update, and delete person records in a MongoDB database.
 
 
@@ -14,7 +14,7 @@ This API provides CRUD (Create, Read, Update, Delete) operations for managing a 
 ```mongodb+srv://<username>:<password>@cluster0.we0x91f.mongodb.net/``` 
 - Install the dependencies using: ```npm install```  
 # Starting server
-To start the API we run npm start
+To start the API we run ```npm start```
 The API will be available at ```http://localhost/5005```
 
 ## API endpoints
@@ -30,15 +30,18 @@ The API will be available at ```http://localhost/5005```
 - Request Body:
 ```{
     "name": "Mark Essien"
-}```
-```Response:
+}
+```
+- Response:
+```
 {
         "_id": "<user_id>",
         "name": "Mark Essien",
         "createdAt": "2023-09-13T08:35:59.735Z",
         "updatedAt": "2023-09-13T12:06:32.914Z",
         "__v": 0
-    }```
+}
+```
 
 # Fetching a person
 - Endpoint: /api/user_id
@@ -46,28 +49,29 @@ The API will be available at ```http://localhost/5005```
 - Response:
 ```{ 
   "name": "Mark Essien",
-}```
-
+}
+```
 
 # Update a Person
 - Endpoint: /api/user_id
 - HTTP Method: PUT
 - Request Body:
 ```{
-  "name": "updated name"
-}```
-
+    "name": "Updated name"
+}
+```
 - Response:
-```{
+```
+{
         "_id": "<user_id>",
-        "name": "updated name",
-        "createdAt": "2023-09-13T12:03:39.900Z",
-        "updatedAt": "2023-09-13T12:03:39.900Z",
+        "name": "Updated name",
+        "createdAt": "2023-09-13T08:35:59.735Z",
+        "updatedAt": "2023-09-13T12:06:32.914Z",
         "__v": 0
-    },```
+}
+```
 
-
-# Remove a Person
+# Remove/delete a Person
 - Endpoint: /api/user_id
 - HTTP Method: DELETE
 - Response:

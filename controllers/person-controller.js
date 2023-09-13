@@ -27,7 +27,7 @@ const getPerson = async (req,res) =>{
     }
 
 };
-//create
+//create person
 const createPerson = async (req,res) =>{
     try{
         const {name} = req.body;
@@ -41,6 +41,7 @@ const createPerson = async (req,res) =>{
     }  
 };
 
+//Update person
 const updatePerson = async (req,res) =>{
     try{
         const person = await Person.findById(req.params.user_id);
@@ -60,7 +61,7 @@ const updatePerson = async (req,res) =>{
 
     }  
 };
-
+//Delete person
 const deletePerson = async (req,res) =>{
     try{
         const deletePerson = await Person.findByIdAndDelete(req.params.user_id);
