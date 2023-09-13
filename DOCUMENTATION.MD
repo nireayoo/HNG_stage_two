@@ -1,6 +1,6 @@
 # HNG backend track stage 2 documentation
-# Persaon API
-This API provides CRUD (Create, Read, Update, Delete) operations for managing a "person" resource. It allows you to create, retrieve, update, and delete person records in a MongoDB database.
+# Person API
+This API provides CRUD (Create, Read, Update, Delete) operations for managing a "person" resource. It allows you to create, retrieve, update, and delete person records in a MongoDB database.  It is designed to be flexible and capable of handling dynamic inputs. All interactions with the API should follow the specified request and response formats.
 
 
 # Setup instructions
@@ -17,6 +17,7 @@ This API provides CRUD (Create, Read, Update, Delete) operations for managing a 
 
 # Starting server
 To start the API we run ```npm start```
+
 The API will be available at ```http://localhost/5005```
 
 ## API endpoints
