@@ -8,7 +8,7 @@ const getPersons = async (req,res) =>{
 
     }catch(err){
         console.log(err);
-        return res.status(500).json({message: "persons not found"});
+        return res.status(404).json({message: "persons not found"});
     }
 };
 
@@ -17,7 +17,7 @@ const getPerson = async (req,res) =>{
     try{
         const person = await Person.findById(req.params.user_id);
         if(!person){
-            return res.status(500).json({message: "person not found"});
+            return res.status(404).json({message: "person not found"});
 
         }
         res.status(200).json(person);
@@ -68,7 +68,7 @@ const deletePerson = async (req,res) =>{
     if(!deletePerson){
         res.status(404).json({ error: 'Person not found' });
     }
-    res.status(200).json({message: 'person has been deleted!'});
+    res.status(200).json({message: 'person deleted sucessfully!'});
     }catch(err){
         return res.status(500).json(err);
 

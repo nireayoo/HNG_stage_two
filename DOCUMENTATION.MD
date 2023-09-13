@@ -79,7 +79,7 @@ The API will be available at ```http://localhost/5005```
 - HTTP Method: DELETE
 - Response:
 ```{
-  "message: "person deleted successfully"
+  "message: "person deleted successfully!"
   }
   ```
 
